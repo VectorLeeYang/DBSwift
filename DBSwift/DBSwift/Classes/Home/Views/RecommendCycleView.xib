@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9BU-LX-QUY" customClass="RecommendCycleView" customModule="DBSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5F9-sp-q2v">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6W3-KW-S1V">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="P5d-vb-X35">
+                    <rect key="frame" x="297" y="113" width="63" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="GJx-ZR-tU2"/>
+                        <constraint firstAttribute="width" constant="63" id="WbK-PK-mba"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TbQ-ph-Unz" firstAttribute="trailing" secondItem="5F9-sp-q2v" secondAttribute="trailing" id="1kc-qf-Hbw"/>
+                <constraint firstItem="5F9-sp-q2v" firstAttribute="leading" secondItem="TbQ-ph-Unz" secondAttribute="leading" id="FlT-25-xbI"/>
+                <constraint firstItem="TbQ-ph-Unz" firstAttribute="bottom" secondItem="5F9-sp-q2v" secondAttribute="bottom" id="JjC-xa-LaX"/>
+                <constraint firstItem="TbQ-ph-Unz" firstAttribute="trailing" secondItem="P5d-vb-X35" secondAttribute="trailing" constant="15" id="nwj-F3-FgU"/>
+                <constraint firstItem="5F9-sp-q2v" firstAttribute="top" secondItem="TbQ-ph-Unz" secondAttribute="top" id="rUC-UY-cgC"/>
+                <constraint firstItem="P5d-vb-X35" firstAttribute="bottom" secondItem="TbQ-ph-Unz" secondAttribute="bottom" id="udh-Xh-rpD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="TbQ-ph-Unz"/>
+            <connections>
+                <outlet property="collectionView" destination="5F9-sp-q2v" id="F28-xg-wnB"/>
+                <outlet property="pageControl" destination="P5d-vb-X35" id="Fh9-85-998"/>
+            </connections>
+            <point key="canvasLocation" x="135.5" y="-95"/>
+        </view>
+    </objects>
+</document>

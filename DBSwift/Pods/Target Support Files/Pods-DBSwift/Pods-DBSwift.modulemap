@@ -1,0 +1,6 @@
+framework module Pods_DBSwift {
+  umbrella header "Pods-DBSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
