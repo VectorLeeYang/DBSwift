@@ -11,8 +11,8 @@ import UIKit
 class RecommendViewModel {
     lazy var cycleModels : [CycleModel] = [CycleModel]()
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
-    fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
-    fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
+    private lazy var bigDataGroup : AnchorGroup = AnchorGroup()
+    private lazy var prettyGroup : AnchorGroup = AnchorGroup()
 }
 
 extension RecommendViewModel {
